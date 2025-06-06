@@ -90,7 +90,7 @@ const InfluencersSection = () => {
         </div>
 
         {/* Testimonials */}
-        <div className="mb-16">
+        {/* <div className="mb-16">
           <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
             Creator Success Stories
           </h3>
@@ -120,7 +120,7 @@ const InfluencersSection = () => {
               </Card>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* CTA */}
         <div className="text-center">

@@ -172,14 +172,14 @@ const HeroSection: React.FC = () => {
                 </Button>
               </Link>
 
-              <Button
+              {/* <Button
                 variant="outline"
                 size="lg"
                 className="border-2 border-cherry-200 text-cherry-700 hover:bg-cherry-50 font-semibold text-lg px-8 py-4 group"
               >
                 <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                 Watch Demo
-              </Button>
+              </Button> */}
             </div>
 
             {/* Stats */}
@@ -193,7 +193,7 @@ const HeroSection: React.FC = () => {
                 <div className="text-gray-600 font-medium">Brand Partners</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">95%</div>
+                <div className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">100%</div>
                 <div className="text-gray-600 font-medium">Success Rate</div>
               </div>
             </div>

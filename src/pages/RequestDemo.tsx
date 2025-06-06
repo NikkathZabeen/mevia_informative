@@ -1,16 +1,36 @@
-
 import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
-import { Calendar, Clock, CheckCircle, Users, BarChart3, Target } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
+import { Calendar, Clock, CheckCircle, Users, BarChart3, Target, Database, Sheet } from 'lucide-react';
+// import { createClient } from '@supabase/supabase-js';
+
+// const supabase = createClient(
+//   'https://zyxtbelggineqthfskgq.supabase.co',
+//   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp5eHRiZWxnZ2luZXF0aGZza2dxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDkxODcwNTQsImV4cCI6MjA2NDc2MzA1NH0.MyoeqdxJP_7tpx1QoiVFW4mkboctoIbI6RQjmb7-KxQ'
+// );
+
+interface DemoFormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  company: string;
+  jobTitle: string;
+  companySize: string;
+  preferredDate: string;
+  preferredTime: string;
+  interests: string;
+}
 
 const RequestDemo = () => {
-  const [selectedDate, setSelectedDate] = useState('');
-  const [selectedTime, setSelectedTime] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm<DemoFormData>();
 
   const demoFeatures = [
     {
@@ -34,6 +54,96 @@ const RequestDemo = () => {
     '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM',
     '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM'
   ];
+
+  // const submitToSupabase = async (data: DemoFormData) => {
+  //   try {
+  //     console.log('Submitting to Supabase:', data);
+  //     // TODO: Replace with actual Supabase client call
+  //     const { error } = await supabase
+  //       .from('demo_requests')
+  //       .insert([{
+  //         first_name: data.firstName,
+  //         last_name: data.lastName,
+  //         email: data.email,
+  //         company: data.company,
+  //         job_title: data.jobTitle,
+  //         company_size: data.companySize,
+  //         preferred_date: data.preferredDate,
+  //         preferred_time: data.preferredTime,
+  //         interests: data.interests,
+  //         created_at: new Date().toISOString()
+  //       }]);
+
+  //     if (error) throw error;
+  //     return { success: true };
+  //   } catch (error) {
+  //     console.error('Supabase error:', error);
+  //     throw error;
+  //   }
+  // };
+
+  const submitToGoogleSheets = async (data: DemoFormData) => {
+    try {
+      console.log('Submitting to Google Sheets:', data);
+      // TODO: Replace with your Google Sheets Web App URL
+      const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycby2gPPamo5qfGEW9XMJdYvEauO7qCa83PGsIvNfIlyeXg2knQEiWOlftKmfZkuAQq8S/exec';
+
+      const response = await fetch(GOOGLE_SHEETS_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          timestamp: new Date().toISOString(),
+          firstName: data.firstName,
+          lastName: data.lastName,
+          email: data.email,
+          company: data.company,
+          jobTitle: data.jobTitle,
+          companySize: data.companySize,
+          preferredDate: data.preferredDate,
+          preferredTime: data.preferredTime,
+          interests: data.interests,
+          type: 'demo_request'
+        }),
+      });
+
+      return { success: true };
+    } catch (error) {
+      console.error('Google Sheets error:', error);
+      throw error;
+    }
+  };
+
+  const onSubmit = async (data: DemoFormData) => {
+    setIsSubmitting(true);
+    console.log('Form submitted:', data);
+
+    try {
+      // Submit to both Supabase and Google Sheets
+      await Promise.all([
+        // submitToSupabase(data),
+        submitToGoogleSheets(data)
+      ]);
+
+      toast({
+        title: "Demo Request Submitted!",
+        description: "We'll contact you within 24 hours to schedule your personalized demo.",
+      });
+
+      reset();
+    } catch (error) {
+      console.error('Submission error:', error);
+      toast({
+        title: "Submission Error",
+        description: "There was an issue submitting your request. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="min-h-screen">
@@ -80,23 +190,47 @@ const RequestDemo = () => {
               {/* Form */}
               <Card className="shadow-2xl border-0">
                 <CardContent className="p-8">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                    Schedule Your Demo
-                  </h2>
+                  <div className="flex items-center justify-between mb-6">
+                    <h2 className="text-3xl font-bold text-gray-900">
+                      Schedule Your Demo
+                    </h2>
+                    {/* <div className="flex space-x-2">
+                      <div className="bg-cherry-100 rounded-full p-2">
+                        <Database className="h-5 w-5 text-cherry-600" />
+                      </div>
+                      <div className="bg-green-100 rounded-full p-2">
+                        <Sheet className="h-5 w-5 text-green-600" />
+                      </div>
+                    </div> */}
+                  </div>
 
-                  <form className="space-y-6">
+                  <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                           First Name *
                         </label>
-                        <Input placeholder="Amulya" className="border-gray-300 focus:border-cherry-500" />
+                        <Input
+                          {...register('firstName', { required: 'First name is required' })}
+                          placeholder="John"
+                          className="border-gray-300 "
+                        />
+                        {errors.firstName && (
+                          <p className="text-red-500 text-sm mt-1">{errors.firstName.message}</p>
+                        )}
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                           Last Name *
                         </label>
-                        <Input placeholder="Sri" className="border-gray-300 focus:border-cherry-500" />
+                        <Input
+                          {...register('lastName', { required: 'Last name is required' })}
+                          placeholder="Doe"
+                          className="border-gray-300 "
+                        />
+                        {errors.lastName && (
+                          <p className="text-red-500 text-sm mt-1">{errors.lastName.message}</p>
+                        )}
                       </div>
                     </div>
 
@@ -104,35 +238,66 @@ const RequestDemo = () => {
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Work Email *
                       </label>
-                      <Input type="email" placeholder="sri@company.com" className="border-gray-300 focus:border-cherry-500" />
+                      <Input
+                        {...register('email', {
+                          required: 'Email is required',
+                          pattern: {
+                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                            message: 'Invalid email address'
+                          }
+                        })}
+                        type="email"
+                        placeholder="john@company.com"
+                        className="border-gray-300 "
+                      />
+                      {errors.email && (
+                        <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+                      )}
                     </div>
 
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Company Name *
                       </label>
-                      <Input placeholder="Your Company" className="border-gray-300 focus:border-cherry-500" />
+                      <Input
+                        {...register('company', { required: 'Company name is required' })}
+                        placeholder="Your Company"
+                        className="border-gray-300"
+                      />
+                      {errors.company && (
+                        <p className="text-red-500 text-sm mt-1">{errors.company.message}</p>
+                      )}
                     </div>
 
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Job Title
                       </label>
-                      <Input placeholder="Marketing Manager" className="border-gray-300 focus:border-cherry-500" />
+                      <Input
+                        {...register('jobTitle')}
+                        placeholder="Marketing Manager"
+                        className="border-gray-300 "
+                      />
                     </div>
 
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Company Size *
                       </label>
-                      <select className="w-full border border-gray-300 rounded-md px-3 py-2 focus:border-cherry-500 focus:outline-none">
-                        <option>Select company size</option>
-                        <option>1-10 employees</option>
-                        <option>11-50 employees</option>
-                        <option>51-200 employees</option>
-                        <option>201-1000 employees</option>
-                        <option>1000+ employees</option>
+                      <select
+                        {...register('companySize', { required: 'Company size is required' })}
+                        className="w-full border border-gray-300 rounded-md px-3 py-2  focus:outline-none"
+                      >
+                        <option value="">Select company size</option>
+                        <option value="1-10">1-10 employees</option>
+                        <option value="11-50">11-50 employees</option>
+                        <option value="51-200">51-200 employees</option>
+                        <option value="201-1000">201-1000 employees</option>
+                        <option value="1000+">1000+ employees</option>
                       </select>
+                      {errors.companySize && (
+                        <p className="text-red-500 text-sm mt-1">{errors.companySize.message}</p>
+                      )}
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -140,30 +305,31 @@ const RequestDemo = () => {
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                           Preferred Date *
                         </label>
-                        <div className="relative">
-                          <Input
-                            type="date"
-                            value={selectedDate}
-                            onChange={(e) => setSelectedDate(e.target.value)}
-                            className="border-gray-300 focus:border-cherry-500"
-                          />
-                          <Calendar className="absolute right-3 top-3 h-5 w-5 text-gray-400" />
-                        </div>
+                        <Input
+                          {...register('preferredDate', { required: 'Preferred date is required' })}
+                          type="date"
+                          className="border-gray-300 "
+                        />
+                        {errors.preferredDate && (
+                          <p className="text-red-500 text-sm mt-1">{errors.preferredDate.message}</p>
+                        )}
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                           Preferred Time *
                         </label>
                         <select
-                          value={selectedTime}
-                          onChange={(e) => setSelectedTime(e.target.value)}
-                          className="w-full border border-gray-300 rounded-md px-3 py-2 focus:border-cherry-500 focus:outline-none"
+                          {...register('preferredTime', { required: 'Preferred time is required' })}
+                          className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none"
                         >
-                          <option>Select time</option>
+                          <option value="">Select time</option>
                           {timeSlots.map((time) => (
                             <option key={time} value={time}>{time} IST</option>
                           ))}
                         </select>
+                        {errors.preferredTime && (
+                          <p className="text-red-500 text-sm mt-1">{errors.preferredTime.message}</p>
+                        )}
                       </div>
                     </div>
 
@@ -172,16 +338,31 @@ const RequestDemo = () => {
                         What are you most interested in learning about?
                       </label>
                       <Textarea
+                        {...register('interests')}
                         placeholder="Tell us about your marketing goals and challenges..."
                         rows={4}
-                        className="border-gray-300 focus:border-cherry-500"
+                        className="border-gray-300 "
                       />
                     </div>
 
-                    <Button className="w-full bg-cherry-gradient hover:shadow-xl transition-all duration-300 text-white font-semibold py-3">
-                      Schedule Demo
+                    <Button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-cherry-gradient hover:shadow-xl transition-all duration-300 text-white font-semibold py-3"
+                    >
+                      {isSubmitting ? 'Submitting...' : 'Schedule Demo'}
                     </Button>
                   </form>
+
+                  {/* <div className="mt-6 p-4 bg-gray-50 rounded-lg">
+                    <div className="flex items-center space-x-2 text-sm text-gray-600">
+                      <Database className="h-4 w-4 text-cherry-600" />
+                      <span>Secure database storage</span>
+                      <span>•</span>
+                      <Sheet className="h-4 w-4 text-green-600" />
+                      <span>Google Sheets integration</span>
+                    </div>
+                  </div> */}
                 </CardContent>
               </Card>
 

@@ -1,20 +1,111 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight, Database, Sheet } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { useToast } from '@/hooks/use-toast';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const submitToSupabase = async (email: string) => {
+    try {
+      console.log('Submitting subscription to Supabase:', email);
+      // TODO: Replace with actual Supabase client call
+      // const { error } = await supabase
+      //   .from('newsletter_subscriptions')
+      //   .insert([{
+      //     email: email,
+      //     subscribed_at: new Date().toISOString(),
+      //     status: 'active'
+      //   }]);
+
+      // if (error) throw error;
+      return { success: true };
+    } catch (error) {
+      console.error('Supabase subscription error:', error);
+      throw error;
+    }
+  };
+
+  const submitToGoogleSheets = async (email: string) => {
+    try {
+      console.log('Submitting subscription to Google Sheets:', email);
+      // TODO: Replace with your Google Sheets Web App URL
+      const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbz8of4HSQSPJnxIRVQNg-LDxBjHPecuoTFhahBxPyOw5E-40-PDlS2G6z9cAQ3gVy6tFQ/exec';
+
+      const response = await fetch(GOOGLE_SHEETS_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          timestamp: new Date().toISOString(),
+          email: email,
+          type: 'newsletter_subscription',
+          source: 'footer'
+        }),
+      });
+
+      return { success: true };
+    } catch (error) {
+      console.error('Google Sheets subscription error:', error);
+      throw error;
+    }
+  };
+
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Connect to Supabase to handle email subscription
-    console.log('Subscribe email:', email);
-    // For now, just show success message
-    alert('Thanks for subscribing! We\'ll keep you updated on the latest influencer marketing trends.');
-    setEmail('');
+
+    if (!email) {
+      toast({
+        title: "Error",
+        description: "Please enter your email address",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Basic email validation
+    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+    if (!emailRegex.test(email)) {
+      toast({
+        title: "Error",
+        description: "Please enter a valid email address",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    console.log('Newsletter subscription:', email);
+
+    try {
+      // Submit to both Supabase and Google Sheets
+      await Promise.all([
+        submitToSupabase(email),
+        submitToGoogleSheets(email)
+      ]);
+
+      toast({
+        title: "Successfully Subscribed!",
+        description: "Thanks for subscribing! We'll keep you updated on the latest influencer marketing trends.",
+      });
+
+      setEmail('');
+    } catch (error) {
+      console.error('Subscription error:', error);
+      toast({
+        title: "Subscription Error",
+        description: "There was an issue with your subscription. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -23,9 +114,19 @@ const Footer = () => {
         {/* Newsletter Subscription Section */}
         <div className="bg-cherry-gradient rounded-2xl p-8 mb-12">
           <div className="text-center">
-            <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
-              Stay Updated with Industry Insights
-            </h3>
+            <div className="flex items-center justify-center space-x-4 mb-4">
+              <h3 className="text-2xl lg:text-3xl font-bold text-white">
+                Stay Updated with Industry Insights
+              </h3>
+              {/* <div className="flex space-x-2">
+                <div className="bg-white/20 rounded-full p-2">
+                  <Database className="h-5 w-5 text-white" />
+                </div>
+                <div className="bg-white/20 rounded-full p-2">
+                  <Sheet className="h-5 w-5 text-white" />
+                </div>
+              </div> */}
+            </div>
             <p className="text-cherry-100 mb-8 max-w-2xl mx-auto">
               Get the latest influencer marketing trends, tips, and exclusive insights delivered to your inbox.
             </p>
@@ -42,15 +143,24 @@ const Footer = () => {
                 />
                 <Button
                   type="submit"
+                  disabled={isSubmitting}
                   className="bg-white text-cherry-600 hover:bg-gray-100 font-semibold px-6 group"
                 >
-                  Subscribe
+                  {isSubmitting ? 'Subscribing...' : 'Subscribe'}
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </div>
-              <p className="text-cherry-100 text-sm mt-3">
-                No spam, unsubscribe anytime. We respect your privacy.
-              </p>
+              <div className="flex items-center justify-center space-x-4 mt-3">
+                <p className="text-cherry-100 text-sm">
+                  No spam, unsubscribe anytime. We respect your privacy.
+                </p>
+                {/* <div className="flex items-center space-x-1 text-cherry-100 text-xs">
+                  <Database className="h-3 w-3" />
+                  <span>+</span>
+                  <Sheet className="h-3 w-3" />
+                  <span>Integrated</span>
+                </div> */}
+              </div>
             </form>
           </div>
         </div>
@@ -108,11 +218,11 @@ const Footer = () => {
                   For Influencers
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/customer-stories" className="text-gray-300 hover:text-white transition-colors">
                   Success Stories
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -163,6 +273,8 @@ const Footer = () => {
           </div>
         </div>
 
+
+
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -186,8 +298,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
+    </footer >
   );
 };
+
 
 export default Footer;

@@ -124,7 +124,7 @@ const Influencers = () => {
         </section>
 
         {/* Success Stories */}
-        <section className="py-16 lg:py-24 bg-cherry-light-gradient">
+        {/* <section className="py-16 lg:py-24 bg-cherry-light-gradient">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
@@ -181,7 +181,7 @@ const Influencers = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Perks Section */}
         <section className="py-16 lg:py-24 bg-white">

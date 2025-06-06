@@ -32,7 +32,7 @@ const RequestDemoSection = () => {
             Ready to See <span className="text-gradient">Denvey</span> in Action?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Book a personalized demo and discover how our platform can transform 
+            Book a personalized demo and discover how our platform can transform
             your influencer marketing campaigns and drive measurable results.
           </p>
         </div>
@@ -42,7 +42,7 @@ const RequestDemoSection = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               {demoFeatures.map((feature, index) => (
-                <div key={index} className="flex items-start space-x-4 animate-fade-in" style={{animationDelay: `${index * 0.2}s`}}>
+                <div key={index} className="flex items-start space-x-4 animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
                   <div className="bg-cherry-100 rounded-full p-3 flex-shrink-0">
                     {feature.icon}
                   </div>
@@ -130,3 +130,6 @@ const RequestDemoSection = () => {
 };
 
 export default RequestDemoSection;
+
+
+

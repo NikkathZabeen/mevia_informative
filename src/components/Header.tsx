@@ -18,7 +18,7 @@ const Header = () => {
     { name: 'About Us', path: '/about' },
     { name: 'Brands', path: '/brands' },
     { name: 'Influencers', path: '/influencers' },
-    { name: 'Customer Stories', path: '/customer-stories' },
+    // { name: 'Customer Stories', path: '/customer-stories' },
     { name: 'Contact Us', path: '/contact' },
   ];
 
@@ -71,7 +71,7 @@ const Header = () => {
 
           {/* Desktop Auth Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <DropdownMenu>
+            {/* <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button
                   variant="ghost"
@@ -92,7 +92,7 @@ const Header = () => {
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
-            </DropdownMenu>
+            </DropdownMenu> */}
 
             <Link to="/request-demo">
               <Button className="bg-cherry-gradient hover:shadow-lg transform hover:scale-105 transition-all duration-200 text-white font-semibold">
