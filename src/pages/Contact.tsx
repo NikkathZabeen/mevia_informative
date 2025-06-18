@@ -584,7 +584,7 @@ const Contact = () => {
     {
       icon: <Mail className="h-6 w-6 text-cherry-600" />,
       title: "Email Us",
-      details: ["hello@denvey.com", "support@denvey.com"],
+      details: ["shaklin@denvey.in", "mansur.saq@denvey.in"],
       action: "Send an email"
     },
     {
@@ -593,12 +593,12 @@ const Contact = () => {
       details: ["+91 8638 43270", "+91 95351 98415"],
       action: "Give us a call"
     },
-    {
-      icon: <MapPin className="h-6 w-6 text-cherry-600" />,
-      title: "Visit Us",
-      details: ["Sarupathar, Nagoan, Assam, India 782427."],
-      action: "Get directions"
-    },
+    // {
+    //   icon: <MapPin className="h-6 w-6 text-cherry-600" />,
+    //   title: "Visit Us",
+    //   details: ["Sarupathar, Nagoan, Assam, India 782427."],
+    //   action: "Get directions"
+    // },
     {
       icon: <Clock className="h-6 w-6 text-cherry-600" />,
       title: "Office Hours",
@@ -636,7 +636,7 @@ const Contact = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-                Get in <span className="text-gradient">Touch</span>
+                Get In <span className="text-gradient">Touch</span>
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                 Have questions about influencer marketing? Want to learn more about our platform?
@@ -652,7 +652,7 @@ const Contact = () => {
               {[...Array(2)].map((_, index) => (
                 <div key={index} className="flex space-x-8 whitespace-nowrap text-xl font-semibold text-cherry-600 opacity-50">
                   {Array.from({ length: 20 }).map((_, i) => (
-                    <span key={i}> Denvey </span>
+                    <span key={i}> DENVEY </span>
                   ))}
                 </div>
               ))}
@@ -663,9 +663,9 @@ const Contact = () => {
         {/* Contact Info */}
         <section className="py-16 lg:py-24 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <div className="flex flex-wrap justify-center items-start gap-8 mb-16">
               {contactInfo.map((info, index) => (
-                <Card key={index} className="text-center shadow-lg hover:shadow-xl transition-all duration-300 border-0">
+                <Card key={index} className="w-full max-w-sm text-center shadow-lg hover:shadow-xl transition-all duration-300 border-0">
                   <CardContent className="p-8">
                     <div className="bg-cherry-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                       {info.icon}

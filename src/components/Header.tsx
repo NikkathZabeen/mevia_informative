@@ -221,7 +221,7 @@ const Header = () => {
               />
             </div>
             <span className="text-2xl lg:text-3xl font-bold text-gradient font-[Playfair_Display]">
-              Denvey
+              DENVEY
             </span>
           </Link>
 
