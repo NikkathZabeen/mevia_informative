@@ -763,7 +763,7 @@ const TellUsYourChallenge = () => {
                             }}
                         >
                             <img
-                                src="\public\lovable-uploads\pin-removebg-preview.png" // <-- or use a full URL here
+                                src="\lovable-uploads\pin-removebg-preview.png" // <-- or use a full URL here
                                 alt="Pin"
                                 className="absolute -top-0.3 -right-0 w-6 h-6 z-10"
                                 style={{
