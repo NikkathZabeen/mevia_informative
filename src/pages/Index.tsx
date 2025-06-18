@@ -8,6 +8,8 @@ import InfluencersSection from '@/components/InfluencersSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import TellUsYourChallenge from '@/components/TellUsYourChallenge';
 import RequestDemoSection from '@/components/RequestDemoSection';
+import FrictionPointsSection from '@/components/FrictionPointsSection';
+import HowDenveySolvesSection from '@/components/HowDenveySolvesSection';
 
 const Index = () => {
   return (
@@ -15,10 +17,12 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
+        <TellUsYourChallenge />
+        <FrictionPointsSection />
         <BrandsSection />
         <InfluencersSection />
-        <HowItWorksSection />
-        <TellUsYourChallenge />
+        {/* <HowItWorksSection /> */}
+        <HowDenveySolvesSection />
         <RequestDemoSection />
       </main>
       <Footer />

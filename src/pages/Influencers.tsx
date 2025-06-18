@@ -35,7 +35,7 @@ const Influencers = () => {
   ];
 
   const perks = [
-    "Guaranteed payment within 30 days",
+    "Assured Escrow payment system",
     "Access to exclusive brand partnerships",
     "Professional development resources",
     "24/7 creator support team",

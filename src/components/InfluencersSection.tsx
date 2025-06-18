@@ -9,23 +9,23 @@ const InfluencersSection = () => {
   const benefits = [
     {
       icon: <IndianRupee className="h-8 w-8 text-cherry-600" />,
-      title: "Monetize Your Influence",
-      description: "Turn your social media presence into a sustainable income stream with premium brand partnerships.",
+      title: "Monetize Your Content with High-Value Brand Deals",
+      description: "Transform your social media influence into sustainable income. Partner with premium, verified brands that align with your niche and audience.",
     },
     {
       icon: <TrendingUp className="h-8 w-8 text-cherry-600" />,
-      title: "Grow Your Audience",
-      description: "Access tools and insights to expand your reach and build a more engaged community.",
+      title: "Accelerate Your Growth with Smart Tools",
+      description: "Access actionable insights, performance tracking, and personalized tips to grow your reach and build a loyal, engaged community.",
     },
     {
       icon: <Shield className="h-8 w-8 text-cherry-600" />,
-      title: "Secure Partnerships",
-      description: "Work with verified brands through our secure platform with guaranteed payments and contracts.",
+      title: "Secure, Verified Brand Collaborations",
+      description: "Get peace of mind with guaranteed payments, transparent contracts, and brand partnerships that are safe, secure, and built for long-term value.",
     },
     {
       icon: <Star className="h-8 w-8 text-cherry-600" />,
-      title: "Premium Opportunities",
-      description: "Get access to exclusive campaigns and premium brand collaborations that match your niche.",
+      title: "Exclusive Campaign Access",
+      description: "Be the first to land high-paying influencer campaigns and exclusive brand collaborations tailored to your style, content category, and audience demographics.",
     },
   ];
   const testimonials = [
@@ -58,11 +58,11 @@ const InfluencersSection = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Amplify Your <span className="text-gradient">Influence</span>
+            Transform Your  <span className="text-gradient">Influence into Impact</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Join thousands of creators who are building sustainable careers through authentic brand partnerships.
-            Turn your passion into profit with our creator-first platform.
+            Join a thriving network of content creators turning their passion into a full-time profession.
+            Collaborate with top brands, grow your audience, and monetize your content — all on one creator-first platform.
           </p>
         </div>
 
@@ -129,7 +129,7 @@ const InfluencersSection = () => {
               size="lg"
               className="bg-cherry-gradient hover:shadow-xl transform hover:scale-105 transition-all duration-300 text-white font-semibold text-lg px-8 py-4 group"
             >
-              Join Our Creator Network
+              Join Denvey’s Creator Network Today
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>

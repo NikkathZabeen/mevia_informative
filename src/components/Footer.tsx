@@ -242,12 +242,22 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Performance Analytics
+                  Brand-Influencer Matching
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Content Creation
+                  Campaign Collaboration & Execution
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                  Trend Analysis & Strategy Optimization
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                  Contract & Payment Support
                 </a>
               </li>
             </ul>
@@ -265,10 +275,10 @@ const Footer = () => {
                 <Phone className="h-5 w-5 text-cherry-400" />
                 <span className="text-gray-300">+91 8638043270</span>
               </div>
-              <div className="flex items-center space-x-3">
+              {/* <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-cherry-400" />
                 <span className="text-gray-300">SARUPATHAR , NAGAON,ASSAM, INDIA - 782427.</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

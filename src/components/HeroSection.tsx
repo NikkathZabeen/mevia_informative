@@ -114,12 +114,12 @@ import classNames from 'classnames';
 
 const phrases = [
   {
-    text: 'Dynamic Brands',
+    text: 'Smarter Matches',
     image:
       'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
   },
   {
-    text: 'Engaging Creators',
+    text: 'Stronger Outcomes',
     image:
       'https://media.istockphoto.com/id/2155004323/photo/young-african-american-woman-in-colorful-clothing-using-a-smartphone-low-angle-shot-with.webp?a=1&b=1&s=612x612&w=0&k=20&c=p5MBn_JFbrzVrptKGPMZ20RVfBL7Ju1Q-4uIxfFdsu4=',
   },
@@ -149,16 +149,15 @@ const HeroSection: React.FC = () => {
           {/* Left Content */}
           <div className="animate-slide-in-left">
             <h1 className="text-4xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-              Connect with{' '}
+              Connect For{' '}
               <span className="text-gradient block h-[80px]">
                 {text}
                 <Cursor cursorStyle="|" />
               </span>
             </h1>
 
-            <p className="text-xl lg:text-2xl text-gray-600 mb-8 leading-relaxed">
-              Bridge the gap between brands and creators with our innovative influencer marketing platform.
-              Drive authentic engagement and measurable results.
+            <p className="text-lg lg:text-2x2 text-gray-600 mb-8 leading-relaxed">
+              Denvey is an AI-powered influencer marketing platform connecting brands with the right creators. Brands find influencers who align with their values, while creators discover campaigns that fit their niche. Together, they build authentic partnerships that drive engagement, reach, and real results.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">

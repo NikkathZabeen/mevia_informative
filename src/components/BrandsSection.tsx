@@ -9,23 +9,23 @@ const BrandsSection = () => {
   const features = [
     {
       icon: <Target className="h-8 w-8 text-cherry-600" />,
-      title: "Targeted Discovery",
-      description: "Find the perfect influencers for your brand using our AI-powered matching algorithm.",
+      title: "AI-Powered Influencer Discovery",
+      description: "Say goodbye to guesswork. Our smart matching algorithm finds the right influencers based on your niche, audience, and campaign goals — faster and more accurately.",
     },
     {
       icon: <BarChart3 className="h-8 w-8 text-cherry-600" />,
-      title: "Real-time Analytics",
-      description: "Track campaign performance with comprehensive metrics and detailed reporting.",
+      title: "Real-Time Campaign Analytics",
+      description: "Track every click, view, and conversion with live data dashboards. Get full visibility into performance metrics that matter — from reach and engagement to ROI.",
     },
     {
       icon: <Users className="h-8 w-8 text-cherry-600" />,
-      title: "Campaign Management",
-      description: "Streamline your influencer campaigns from discovery to delivery and payment.",
+      title: "End-to-End Campaign Management",
+      description: "Plan, execute, and manage influencer campaigns seamlessly. From discovery to contract, content approval to payment — Denvey handles it all in one streamlined platform.",
     },
     {
       icon: <Zap className="h-8 w-8 text-cherry-600" />,
-      title: "ROI Optimization",
-      description: "Maximize your marketing budget with data-driven insights and recommendations.",
+      title: "Maximize ROI with Actionable Insights",
+      description: "Optimize your influencer marketing strategy with AI-driven recommendations. Spend smarter, scale faster, and convert better with performance-backed decisions.",
     },
   ];
 
@@ -39,11 +39,12 @@ const BrandsSection = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Empower Your <span className="text-gradient">Brand</span>
+            Achieve Brand Growth with <br /><span className="text-gradient">Effective Creator Collaborations</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Connect with authentic voices that resonate with your audience.
-            Drive engagement, build trust, and achieve measurable results with our comprehensive influencer marketing platform.
+            Connect with authentic influencers who align with your brand values and speak your audience’s language.
+            Denvey helps you drive real engagement, build trust, and
+            achieve measurable ROI through data-driven creator collaborations.
           </p>
         </div>
 
@@ -94,7 +95,7 @@ const BrandsSection = () => {
               size="lg"
               className="bg-cherry-gradient hover:shadow-xl transform hover:scale-105 transition-all duration-300 text-white font-semibold text-lg px-8 py-4 group"
             >
-              Explore Brand Solutions
+              Connect with the Ideal Creator
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>

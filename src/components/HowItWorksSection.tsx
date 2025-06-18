@@ -81,7 +81,7 @@ const HowItWorksSection = () => {
         </div>
 
         {/* Process Visualization */}
-        <div className="bg-cherry-light-gradient rounded-3xl p-8 lg:p-12">
+        {/* <div className="bg-cherry-light-gradient rounded-3xl p-8 lg:p-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl font-bold text-gray-900 mb-6">
@@ -121,7 +121,7 @@ const HowItWorksSection = () => {
               <div className="absolute inset-0 bg-cherry-gradient rounded-2xl opacity-10"></div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -1,83 +1,97 @@
-import React from "react";
-import { Smartphone, Brain, BarChart3 } from "lucide-react";
-
-const timelineData = [
-    {
-        version: "1.1",
-        title: "Mobile App for Influencers",
-        description:
-            "A sleek, intuitive app empowering creators to showcase profiles, track campaigns, and access exclusive brand opportunities.",
-        features: ["Profile Management", "Campaign Tracking", "Real-time Analytics", "Push Notifications"],
-        icon: <Smartphone className="h-6 w-6 text-white" />,
-        color: "bg-gradient-to-r from-red-500 to-red-700",
-    },
-    {
-        version: "1.2",
-        title: "AI-Powered Matchmaking",
-        description:
-            "Integration of Denvey's proprietary AI Engine to revolutionize brand-influencer connections through smart matchmaking.",
-        features: ["Smart Matching", "Audience Analysis", "Fraud Detection", "Performance Prediction"],
-        icon: <Brain className="h-6 w-6 text-white" />,
-        color: "bg-gradient bg-gradient-to-r from-red-500 to-red-700",
-    },
-    {
-        version: "1.3",
-        title: "Advanced Analytics Dashboard",
-        description:
-            "Deployment of advanced data analytics and real-time performance dashboards with comprehensive insights.",
-        features: ["Real-time Dashboards", "Sentiment Analysis", "ROI Tracking", "Adaptive Optimization"],
-        icon: <BarChart3 className="h-6 w-6 text-white" />,
-        color: "bg-gradient-to-r from-red-500 to-red-700",
-    },
-];
+import React from 'react';
+import { Smartphone, Brain } from 'lucide-react';
 
 const DenveyLaunchPathway = () => {
+    const launchSteps = [
+        {
+            version: "V1.1",
+            title: "Empowering Influencers & Brands",
+            description: (
+                <>
+                    <strong>Mobile App for Influencers:</strong> A sleek, user-centric app designed for creators to showcase their profiles, track campaigns, and connect with exclusive collaboration opportunities.
+                    <br /><br />
+                    <strong>Web Application for Brands:</strong> A powerful brand dashboard that lets businesses find the right creators, manage campaigns effortlessly, and maximize their influencer marketing potential.
+                </>
+            ),
+            icon: Smartphone,
+            color: "from-red-500 to-red-700",
+            bgColor: "bg-red-50",
+        },
+        {
+            version: "V1.2",
+            title: "Intelligent Matching & Insights",
+            description: (
+                <>
+                    <strong>Proprietary Matching Algorithm:</strong> Using advanced technology and data, Denvey intelligently pairs the right creators with the right brands — ensuring more impactful campaigns.
+                    <br /><br />
+                    <strong>Enhanced Analytics:</strong> Our platform provides deeper, actionable insights, helping brands and creators make smarter decisions and drive greater return on investment (ROI).
+                </>
+            ),
+            icon: Brain,
+            color: "from-pink-500 to-pink-700",
+            bgColor: "bg-pink-50",
+        },
+    ];
+
     return (
-        <section className="w-screen min-h-screen bg-gradient-to-b from-pink-50 to-red-50 py-20 overflow-hidden">
-            <div className="text-center mb-16">
-                <h2 className="text-5xl font-bold text-gray-900">
-                    Strategic <span className="text-red-700">Denvey</span> Launch
-                </h2>
-                <p className="text-md text-gray-600 mt-2 max-w-xl mx-auto">
-                    Our innovative roadmap to revolutionize influencer marketing through cutting-edge technology and data-driven insights.
-                </p>
-            </div>
+        <section className="py-16 lg:py-24 bg-gradient-to-b from-pink-50 to-red-50 overflow-hidden">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Header */}
+                <div className="text-center mb-20">
+                    <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-4">
+                        Denvey <span className="text-red-600">Strategic Launch Pathway</span>
+                    </h2>
+                    <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                        Discover how Denvey is shaping the future of influencer marketing — empowering creators and brands to connect, collaborate, and grow smarter.
+                    </p>
+                </div>
 
-            <div className="relative w-full flex flex-col items-center">
-                {/* Vertical Line */}
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 h-full w-1 bg-red-300"></div>
+                {/* Timeline */}
+                <div className="relative max-w-6xl mx-auto">
+                    {/* Vertical Line */}
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-red-200 hidden lg:block"></div>
 
-                {/* Timeline Items */}
-                {timelineData.map((item, idx) => (
-                    <div
-                        key={item.version}
-                        className={`w-full max-w-5xl flex ${idx % 2 === 0 ? "justify-start" : "justify-end"} mb-28 relative`}
-                    >
-                        <div
-                            className={`absolute top-0 left-1/2 transform -translate-x-1/2 bg-white border-4 border-white rounded-full z-10 w-12 h-12 flex items-center justify-center shadow-lg ${item.color}`}
-                        >
-                            {item.icon}
-                        </div>
+                    {launchSteps.map((step, index) => {
+                        const isEven = index % 2 === 0;
+                        const Icon = step.icon;
 
-                        <div
-                            className={`w-96 mt-6 bg-white shadow-lg rounded-xl overflow-hidden ${idx % 2 === 0 ? "ml-16" : "mr-16"}`}
-                        >
-                            <div className={`${item.color} px-6 py-5 text-white rounded-t-xl font-semibold text-2x1`}>
-                                Version {item.version} <br /> <span className="font-bold">{item.title}</span>
+                        return (
+                            <div
+                                key={index}
+                                className={`relative flex items-center mb-16 lg:mb-24 ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}
+                            >
+                                {/* Content */}
+                                <div className={`w-full lg:w-5/12 ${isEven ? 'lg:pr-16' : 'lg:pl-16'}`}>
+                                    <div className={`relative p-8 lg:p-10 rounded-3xl ${step.bgColor} border-2 border-white shadow-xl`}>
+                                        {/* Version Badge */}
+                                        <div className={`absolute -top-4 ${isEven ? '-right-4' : '-left-4'} 
+                                    w-12 h-12 bg-gradient-to-r ${step.color} rounded-full 
+                                    flex items-center justify-center text-white font-bold text-sm shadow-md`}>
+                                            {step.version}
+                                        </div>
+
+                                        {/* Icon */}
+                                        <div className={`inline-flex items-center justify-center w-16 h-16 
+                                    bg-gradient-to-r ${step.color} rounded-2xl mb-6 shadow-lg`}>
+                                            <Icon className="h-8 w-8 text-white" />
+                                        </div>
+
+                                        {/* Text */}
+                                        <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                                            {step.title}
+                                        </h3>
+                                        <p className="text-gray-700 leading-relaxed text-base">{step.description}</p>
+                                    </div>
+                                </div>
+
+                                {/* Timeline Node */}
+                                <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 w-8 h-8 
+                                bg-gradient-to-r from-red-500 to-pink-500 rounded-full 
+                                border-4 border-white shadow-lg z-10"></div>
                             </div>
-                            <div className="px-6 py-6">
-                                <p className="text-base text-gray-600 mb-4 leading-relaxed font-light">
-                                    {item.description}
-                                </p>
-                                <ul className="list-disc list-inside text-base text-gray-700 space-y-1">
-                                    {item.features.map((feature, i) => (
-                                        <li key={i}>{feature}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                ))}
+                        );
+                    })}
+                </div>
             </div>
         </section>
     );
