@@ -203,7 +203,7 @@ const Header = () => {
     { name: 'Brand-Influencer Matching', path: '/services/performance-analytics' },
     { name: 'Campaign Collaboration & Execution', path: '/services/content-creation' },
     { name: 'Trend Analysis & Strategy Optimization', path: '/services/content-creation' },
-    { name: 'Contract & Payment Support', path: '/services/content-creation' },
+    { name: 'Contract & Payment Support', path: '/services/content-creation' }
   ];
 
   const isActivePath = (path: string) => location.pathname === path;
@@ -340,12 +340,12 @@ const Header = () => {
               })}
 
               <div className="pt-4 border-t border-gray-200 space-y-3">
-                <Link to="/login/brands" className="block text-gray-700 hover:text-cherry-600 transition-colors">
+                {/* <Link to="/login/brands" className="block text-gray-700 hover:text-cherry-600 transition-colors">
                   Login for Brands
                 </Link>
                 <Link to="/login/influencers" className="block text-gray-700 hover:text-cherry-600 transition-colors">
                   Login for Influencers
-                </Link>
+                </Link> */}
                 <Link to="/request-demo" onClick={() => setIsMenuOpen(false)}>
                   <Button className="w-full bg-cherry-gradient text-white font-semibold">
                     Request Demo
