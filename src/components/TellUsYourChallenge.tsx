@@ -1081,15 +1081,36 @@ interface ChallengeNote {
 }
 
 const fixedPositions = [
-    { x: 20, y: 20 },
-    { x: 260, y: 20 },
-    { x: 500, y: 20 },
-    { x: 20, y: 180 },
-    { x: 260, y: 180 },
-    { x: 500, y: 180 },
-    { x: 140, y: 340 },
-    { x: 380, y: 340 },
+    { x: 50, y: 20 },
+    { x: 250, y: 20 },
+    { x: 440, y: 20 },
+    { x: 50, y: 180 },
+    { x: 250, y: 180 },
+    { x: 440, y: 180 },
+    { x: 130, y: 340 },
+    { x: 360, y: 340 },
 ];
+// const fixedPositions = [
+//     { x: 60, y: 20 },   // was 20 → moved right
+//     { x: 170, y: 20 },  // was 190 → moved left
+//     { x: 300, y: 20 },  // was 360 → moved left more
+//     { x: 60, y: 140 },  // was 20 → moved right
+//     { x: 170, y: 140 }, // was 190 → moved left
+//     { x: 300, y: 140 }, // was 360 → moved left more
+//     { x: 120, y: 260 }, // was 105 → slight right
+//     { x: 250, y: 260 }, // was 275 → slight left
+// ];
+
+// const fixedPositions = [
+//     { x: 20, y: 20 },
+//     { x: 190, y: 20 },
+//     { x: 360, y: 20 },
+//     { x: 20, y: 140 },
+//     { x: 190, y: 140 },
+//     { x: 360, y: 140 },
+//     { x: 105, y: 260 },
+//     { x: 275, y: 260 },
+// ];
 
 const initialTexts = [
     'Fair pay for creators is still a myth.',
@@ -1236,7 +1257,7 @@ const TellUsYourChallenge = () => {
             position: relative !important;
             width: 48% !important;
             max-width: 300px;
-            margin: 10px 1%;
+            margin: 6px 1%;
             display: inline-block;
             vertical-align: top;
             left: auto !important;
@@ -1260,7 +1281,7 @@ const TellUsYourChallenge = () => {
         }
       `}</style>
 
-            <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+            <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
                 {/* ✅ LEFT SECTION */}
                 <div className="text-left sm:text-center sm:mx-auto sm:max-w-xl lg:text-left lg:mx-0">
 
@@ -1325,7 +1346,7 @@ const TellUsYourChallenge = () => {
                 </div>
 
                 {/* ✅ RIGHT SECTION */}
-                <div className="relative w-full max-w-[720px] bg-[#f8f9fa] rounded-xl border border-gray-300 shadow-md p-6 min-h-[500px] challenge-note-wall overflow-hidden">
+                <div className="relative w-full max-w-[650px] bg-[#f8f9fa] rounded-xl border border-gray-300 shadow-md p-6 min-h-[500px] challenge-note-wall overflow-hidden">
 
                     {notes.map((note) => (
                         <div
@@ -1342,7 +1363,7 @@ const TellUsYourChallenge = () => {
                             <img
                                 src="/lovable-uploads/pin-removebg-preview.png"
                                 alt="Pin"
-                                className="absolute -top-0.3 -right-0 w-6 h-6 z-10"
+                                className="absolute -top-0.3 -right-0 w-5 h-5 z-10"
                                 style={{
                                     transform: 'rotate(-5deg) scale(1.2)',
                                     filter: 'drop-shadow(2px 2px 3px rgba(0,0,0,0.4))',
