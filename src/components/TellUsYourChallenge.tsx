@@ -1081,14 +1081,14 @@ interface ChallengeNote {
 }
 
 const fixedPositions = [
-    { x: 50, y: 20 },
-    { x: 250, y: 20 },
-    { x: 440, y: 20 },
-    { x: 50, y: 180 },
-    { x: 250, y: 180 },
-    { x: 440, y: 180 },
-    { x: 130, y: 340 },
-    { x: 360, y: 340 },
+    { x: 30, y: 20 },
+    { x: 230, y: 20 },
+    { x: 420, y: 20 },
+    { x: 30, y: 180 },
+    { x: 230, y: 180 },
+    { x: 420, y: 180 },
+    { x: 140, y: 340 },
+    { x: 350, y: 340 },
 ];
 // const fixedPositions = [
 //     { x: 60, y: 20 },   // was 20 → moved right
@@ -1346,7 +1346,7 @@ const TellUsYourChallenge = () => {
                 </div>
 
                 {/* ✅ RIGHT SECTION */}
-                <div className="relative w-full max-w-[650px] bg-[#f8f9fa] rounded-xl border border-gray-300 shadow-md p-6 min-h-[500px] challenge-note-wall overflow-hidden">
+                <div className="relative w-full max-w-[610px] bg-[#f8f9fa] rounded-xl border border-gray-300 shadow-md p-6 min-h-[500px] challenge-note-wall overflow-hidden">
 
                     {notes.map((note) => (
                         <div
