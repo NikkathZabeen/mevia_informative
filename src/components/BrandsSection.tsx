@@ -93,9 +93,9 @@ const BrandsSection = () => {
           <Link to="/brands">
             <Button
               size="lg"
-              className="bg-cherry-gradient hover:shadow-xl transform hover:scale-105 transition-all duration-300 text-white font-semibold text-lg px-8 py-4 group"
+              className="bg-cherry-gradient hover:shadow-xl transform hover:scale-105 transition-all duration-300 text-white font-semibold text-lg px-3 py-4 group"
             >
-              Connect with the Ideal Creator
+              Connect with Ideal Creator
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>

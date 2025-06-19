@@ -167,18 +167,22 @@
 // export default About;
 
 
-
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { motion } from 'framer-motion';
 import { Rocket, DollarSign, Globe2, Star } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import DenveyLaunchPathway from "@/components/DenveyLaunchPathway";
+import DenveyLaunchPathway from '@/components/DenveyLaunchPathway';
 
 const About = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const textData = [
+    'Over 3M–4M active content creators in India',
+    '800M+ internet users and 450M+  active social media users',
+    'Indian influencer marketing industry is estimated to be worth ₹2,200Cr+ ',
+  ];
 
   useEffect(() => {
     const cycle = setInterval(() => {
@@ -190,30 +194,24 @@ const About = () => {
   const values = [
     {
       icon: <Rocket className="h-8 w-8 text-cherry-600" />,
-      title: "B2C & D2C Brand Acceleration",
-      description: "Boost growth with precision influencer alignment."
+      title: 'B2C & D2C Brand Acceleration',
+      description: 'Boost growth with precision influencer alignment.',
     },
     {
       icon: <DollarSign className="h-8 w-8 text-cherry-600" />,
-      title: "Affiliate Commerce Innovation",
-      description: "Collaborate with authentic creators to drive sales."
+      title: 'Affiliate Commerce Innovation',
+      description: 'Collaborate with authentic creators to drive sales.',
     },
     {
       icon: <Globe2 className="h-8 w-8 text-cherry-600" />,
-      title: "Regional & Vernacular Content Monetization",
-      description: "Unlock new revenue streams across India."
+      title: 'Regional & Vernacular Content Monetization',
+      description: 'Unlock new revenue streams across India.',
     },
     {
       icon: <Star className="h-8 w-8 text-cherry-600" />,
-      title: "Futuristic Creator Careers",
-      description: "Support creator independence and equity participation for long-term success."
-    }
-  ];
-
-  const textData = [
-    "Over 3–4 million active content creators in India",
-    "800+ million internet users and 450+ million active social media users",
-    "Indian influencer marketing industry is estimated to be worth ₹2,200+ crore"
+      title: 'Futuristic Creator Careers',
+      description: 'Support creator independence and equity participation for long-term success.',
+    },
   ];
 
   return (
@@ -221,8 +219,8 @@ const About = () => {
       <Header />
       <main>
         {/* About Section */}
-        <section className="pt-24 pb-16 lg:pt-32 lg:pb-24 bg-hero-gradient">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center lg:justify-between justify-center text-center lg:text-left">
+        <section className="pt-24 pb-16 lg:pt-32 lg:pb-24 bg-hero-gradient overflow-hidden">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center lg:justify-between justify-center text-center lg:text-left min-h-[500px]">
             {/* Text Block */}
             <div className="lg:w-1/2 mb-12 lg:mb-0">
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-4">
@@ -232,47 +230,60 @@ const About = () => {
                 India's Influencer Marketing Ecosystem Is Poised for Transformation
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                India’s influencer marketing industry is a vast, untapped frontier — ready for powerful transformation and growth. With Denvey’s cutting-edge technology, intelligent influencer matchmaking, and ROI-centric platform, we’re shaping a new era of influence — making it more efficient, more profitable, and more impactful for brands, creators, and businesses.
+                India’s influencer marketing industry is a vast, untapped frontier — ready for powerful transformation and
+                growth. With Denvey’s cutting-edge technology, intelligent influencer matchmaking, and ROI-centric platform,
+                we’re shaping a new era of influence — making it more efficient, more profitable, and more impactful for brands,
+                creators, and businesses.
               </p>
             </div>
 
             {/* Animated Circles */}
-            <div className="lg:w-1/2 relative flex items-end justify-center min-h-[500px]">
+            <div className="lg:w-1/2 w-full relative flex items-end justify-center min-h-[400px] sm:min-h-[350px] overflow-visible">
               {[
                 {
-                  text: "Over 3–4 million active content creators in India",
-                  size: 200,
+                  text: "Over 3M–4M active content creators in India",
+                  size: { base: 160, sm: 200 },
+                  textSize: "text-[12px] sm:text-[14px] lg:text-[13px]",
+                  maxWidth: "max-w-[75%]",
+                  textPadding: "px-2 pt-8",
                   bg: "linear-gradient(to right, #7f1d1d, #dc2626)",
                   delay: 0,
                   z: 30,
-                  textTop: "pt-10"
+                  textTop: "pt-6 sm:pt-10"
                 },
                 {
-                  text: "800+ million internet users and 450+ million active social media users",
-                  size: 320,
+                  text: "800M+ internet users and 450M+ active social media users",
+                  size: { base: 260, sm: 340 },
+                  textSize: "text-[14px] sm:text-[16px] lg:text-[13px]",
+                  maxWidth: "max-w-[70%]",
+                  textPadding: "px-4 pt-3",
                   bg: "linear-gradient(to right, #991b1b, #ef4444)",
                   delay: 1,
                   z: 20,
-                  textTop: "pt-16"
+                  textTop: "pt-10 sm:pt-16"
                 },
                 {
-                  text: "Indian influencer marketing industry is estimated to be worth ₹2,200+ crore",
-                  size: 480,
+                  text: "Indian influencer marketing industry is estimated to be worth ₹2,200Cr+ ",
+                  size: { base: 370, sm: 500 },
+                  textSize: "text-[16px] sm:text-[18px] lg:text-[13px]",
+                  maxWidth: "max-w-[75%]",
+                  textPadding: "px-5 pt-6",
                   bg: "linear-gradient(to right, #7f1d1d, #450a0a)",
                   delay: 2,
                   z: 10,
-                  textTop: "pt-24",
+                  textTop: "pt-16 sm:pt-24",
                   textColor: "text-white"
                 }
-              ].map(({ text, size, bg, delay, z, textTop }, index) => (
+              ].map(({ text, size, bg, delay, z, textTop, textColor = "text-white", textSize, maxWidth, textPadding }, index) => (
                 <motion.div
                   key={index}
-                  className={`absolute bottom-0 flex flex-col items-center text-center text-white font-medium rounded-full overflow-hidden ${textTop}`}
+                  className={`absolute bottom-0 flex flex-col items-center justify-start text-center font-medium rounded-full overflow-hidden ${textTop}`}
                   style={{
-                    width: `${size}px`,
-                    height: `${size}px`,
+                    width: `${size.base}px`,
+                    height: `${size.base}px`,
                     backgroundImage: bg,
                     zIndex: z,
+                    paddingTop: '20px'
                   }}
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
@@ -282,12 +293,13 @@ const About = () => {
                     ease: "easeInOut"
                   }}
                 >
-                  <div className="px-4 text-sm sm:text-base max-w-[80%] leading-snug">
+                  <div className={`${textPadding} leading-snug drop-shadow-md font-semibold ${textColor} ${textSize} ${maxWidth}`}>
                     {text}
                   </div>
                 </motion.div>
               ))}
             </div>
+
           </div>
         </section>
 
@@ -299,7 +311,8 @@ const About = () => {
                 Future Booming Opportunities
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Denvey isn’t just entering the influencer space — it’s redefining it. Join us and grow with the future of influence-driven commerce in India.
+                Denvey isn’t just entering the influencer space — it’s redefining it. Join us and grow with the future of
+                influence-driven commerce in India.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -309,12 +322,8 @@ const About = () => {
                     <div className="bg-cherry-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                       {value.icon}
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                      {value.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {value.description}
-                    </p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">{value.title}</h3>
+                    <p className="text-gray-600 leading-relaxed">{value.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -322,8 +331,7 @@ const About = () => {
           </div>
         </section>
 
-        {/* Journey */}
-        {/* Keep rest of the sections unchanged — Journey, Mission, Vision, DenveyLaunchPathway, Footer etc. */}
+        {/* Journey Section */}
         <section className="py-20 lg:py-32 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
@@ -334,12 +342,11 @@ const About = () => {
             </div>
 
             <div className="max-w-4xl mx-auto">
-              {/* Timeline Line */}
               <div className="relative">
                 <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-cherry-200"></div>
 
                 <div className="space-y-16">
-                  {/* 2022 Start */}
+                  {/* Step 1 */}
                   <div className="relative flex items-start gap-8 animate-slide-in-left">
                     <div className="flex-shrink-0 w-16 h-16 bg-cherry-600 rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
                       1
@@ -356,7 +363,7 @@ const About = () => {
                     </div>
                   </div>
 
-                  {/* 2 Years R&D */}
+                  {/* Step 2 */}
                   <div className="relative flex items-start gap-8 animate-slide-in-left" style={{ animationDelay: '0.3s' }}>
                     <div className="flex-shrink-0 w-16 h-16 bg-cherry-600 rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
                       2
@@ -373,7 +380,7 @@ const About = () => {
                     </div>
                   </div>
 
-                  {/* Platform Launch */}
+                  {/* Step 3 */}
                   <div className="relative flex items-start gap-8 animate-slide-in-left" style={{ animationDelay: '0.6s' }}>
                     <div className="flex-shrink-0 w-16 h-16 bg-cherry-600 rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
                       3
@@ -390,7 +397,7 @@ const About = () => {
                     </div>
                   </div>
 
-                  {/* Future Vision */}
+                  {/* Step 4 */}
                   <div className="relative flex items-start gap-8 animate-slide-in-left" style={{ animationDelay: '0.9s' }}>
                     <div className="flex-shrink-0 w-16 h-16 bg-cherry-600 rounded-full flex items-center justify-center text-white font-bold text-xl z-10">
                       ∞
@@ -412,7 +419,6 @@ const About = () => {
           </div>
         </section>
 
-
         <DenveyLaunchPathway />
       </main>
       <Footer />
@@ -421,6 +427,7 @@ const About = () => {
 };
 
 export default About;
+
 // export default About;
 
 

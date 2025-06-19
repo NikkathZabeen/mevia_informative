@@ -106,7 +106,7 @@
 
 
 import React, { useEffect, useState } from 'react';
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
@@ -132,7 +132,7 @@ const HeroSection: React.FC = () => {
     loop: 0,
     delaySpeed: 400,
     typeSpeed: 60,
-    deleteSpeed: 60
+    deleteSpeed: 60,
   });
 
   useEffect(() => {
@@ -148,16 +148,19 @@ const HeroSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="animate-slide-in-left">
-            <h1 className="text-4xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-              Connect For{' '}
-              <span className="text-gradient block h-[80px]">
-                {text}
-                <Cursor cursorStyle="|" />
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              Connect For <br />
+              <span className="text-gradient inline-block align-middle">
+                {text}<br></br><br></br>
+                {/* <Cursor cursorStyle="|" /> */}
               </span>
             </h1>
-            <p className="text-lg lg:text-2x2 text-gray-600 mb-8 leading-relaxed">
+
+
+            <p className="text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed">
               Denvey is an AI-powered influencer marketing platform connecting brands with the right creators. Brands find influencers who align with their values, while creators discover campaigns that fit their niche. Together, they build authentic partnerships that drive engagement, reach, and real results.
             </p>
+
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <Link to="/request-demo">
                 <Button
@@ -168,15 +171,17 @@ const HeroSection: React.FC = () => {
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-
-              {/* <Button
+              {/* Optionally re-enable the Watch Demo button */}
+              {/* 
+              <Button
                 variant="outline"
                 size="lg"
                 className="border-2 border-cherry-200 text-cherry-700 hover:bg-cherry-50 font-semibold text-lg px-8 py-4 group"
               >
                 <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                 Watch Demo
-              </Button> */}
+              </Button> 
+              */}
             </div>
 
             {/* Stats */}
@@ -211,18 +216,20 @@ const HeroSection: React.FC = () => {
                 />
 
                 {/* Floating Cards */}
-                <div className="absolute top-6 right-6 bg-white rounded-lg shadow-lg p-4 animate-float">
-                  <div className="text-2xl font-bold text-cherry-600">+212%</div>
-                  <div className="text-sm text-gray-600">Engagement Growth</div>
+                {/* Floating Cards - Responsive */}
+                <div className="absolute top-4 right-4 sm:top-6 sm:right-6 bg-white rounded-lg shadow-lg p-3 sm:p-4 animate-float w-32 sm:w-auto max-w-[90%]">
+                  <div className="text-lg sm:text-2xl font-bold text-cherry-600">+212%</div>
+                  <div className="text-xs sm:text-sm text-gray-600">Engagement Growth</div>
                 </div>
 
                 <div
-                  className="absolute bottom-6 left-6 bg-white rounded-lg shadow-lg p-4 animate-float"
+                  className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-white rounded-lg shadow-lg p-3 sm:p-4 animate-float w-36 sm:w-auto max-w-[90%]"
                   style={{ animationDelay: '1s' }}
                 >
-                  <div className="text-2xl font-bold text-cherry-600">&#8377; 1.8Cr +</div>
-                  <div className="text-sm text-gray-600">Campaign ROI</div>
+                  <div className="text-lg sm:text-2xl font-bold text-cherry-600">&#8377; 1.8Cr +</div>
+                  <div className="text-xs sm:text-sm text-gray-600">Campaign ROI</div>
                 </div>
+
               </div>
             </div>
           </div>
@@ -233,4 +240,3 @@ const HeroSection: React.FC = () => {
 };
 
 export default HeroSection;
-
