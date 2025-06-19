@@ -1121,8 +1121,7 @@ const generateInitialNotes = (): ChallengeNote[] => {
 };
 
 const submitToGoogleSheets = async (data: any) => {
-    const endpoint =
-        'https://script.google.com/macros/s/AKfycbzKPV-4VOYOrD-OFq5Vit4FKMkEoX8uNnNdOuYfHPl_Uk2tXYckj4vPnQ-zc0vpQZgn1w/exec';
+    const endpoint = 'https://script.google.com/macros/s/AKfycbzKPV-4VOYOrD-OFq5Vit4FKMkEoX8uNnNdOuYfHPl_Uk2tXYckj4vPnQ-zc0vpQZgn1w/exec';
     try {
         await fetch(endpoint, {
             method: 'POST',
@@ -1223,7 +1222,8 @@ const TellUsYourChallenge = () => {
     };
 
     return (
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-white overflow-x-hidden">
+
             <style>{`
         @media (max-width: 1024px) and (min-width: 640px) {
           .challenge-note-wall {
@@ -1261,8 +1261,9 @@ const TellUsYourChallenge = () => {
       `}</style>
 
             <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-                {/* LEFT SECTION */}
+                {/* ✅ LEFT SECTION */}
                 <div className="text-left sm:text-center sm:mx-auto sm:max-w-xl lg:text-left lg:mx-0">
+
                     <div className="mb-10">
                         <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Challenge Wall</h1>
                         <h2 className="text-3xl font-semibold text-gray-800 mb-4 leading-tight">
@@ -1323,8 +1324,9 @@ const TellUsYourChallenge = () => {
                     )}
                 </div>
 
-                {/* RIGHT SECTION */}
-                <div className="relative w-[720px] bg-[#f8f9fa] rounded-xl border border-gray-300 shadow-md p-6 min-h-[500px] challenge-note-wall">
+                {/* ✅ RIGHT SECTION */}
+                <div className="relative w-full max-w-[720px] bg-[#f8f9fa] rounded-xl border border-gray-300 shadow-md p-6 min-h-[500px] challenge-note-wall overflow-hidden">
+
                     {notes.map((note) => (
                         <div
                             key={note.id}
@@ -1332,17 +1334,17 @@ const TellUsYourChallenge = () => {
                             style={{
                                 left: `${note.position.x}px`,
                                 top: `${note.position.y}px`,
-                                width: '200px',
-                                height: '130px',
+                                width: '150px',
+                                height: '100px',
                                 transform: `rotate(${note.rotation}deg)`,
                             }}
                         >
                             <img
                                 src="/lovable-uploads/pin-removebg-preview.png"
                                 alt="Pin"
-                                className="absolute -top-0.4 -right-0 w-6 h-6 z-10"
+                                className="absolute -top-0.3 -right-0 w-6 h-6 z-10"
                                 style={{
-                                    transform: 'rotate(-10deg) scale(1.2)',
+                                    transform: 'rotate(-5deg) scale(1.2)',
                                     filter: 'drop-shadow(2px 2px 3px rgba(0,0,0,0.4))',
                                 }}
                             />
@@ -1357,7 +1359,6 @@ const TellUsYourChallenge = () => {
 };
 
 export default TellUsYourChallenge;
-
 
 
 
