@@ -1346,7 +1346,7 @@ const TellUsYourChallenge = () => {
                 </div>
 
                 {/* ✅ RIGHT SECTION */}
-                <div className="relative w-full max-w-[610px] bg-[#f8f9fa] rounded-xl border border-gray-300 shadow-md p-6 min-h-[500px] challenge-note-wall overflow-hidden">
+                <div className="relative w-full max-w-[720px] bg-[#f8f9fa] rounded-xl border border-gray-300 shadow-md p-6 min-h-[500px] challenge-note-wall overflow-hidden">
 
                     {notes.map((note) => (
                         <div
