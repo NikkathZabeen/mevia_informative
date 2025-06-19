@@ -1353,7 +1353,7 @@ const TellUsYourChallenge = () => {
                             key={note.id}
                             className={`challenge-note absolute p-4 rounded-lg shadow-md border transition-all duration-500 overflow-hidden ${getCategoryStyle(note.category)}`}
                             style={{
-                                left: `${note.position.x - 20}px`,
+                                left: `${note.position.x - 10}px`,
                                 top: `${note.position.y}px`,
                                 width: '150px',
                                 height: '100px',
