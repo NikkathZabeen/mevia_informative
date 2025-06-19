@@ -155,11 +155,9 @@ const HeroSection: React.FC = () => {
                 <Cursor cursorStyle="|" />
               </span>
             </h1>
-
             <p className="text-lg lg:text-2x2 text-gray-600 mb-8 leading-relaxed">
               Denvey is an AI-powered influencer marketing platform connecting brands with the right creators. Brands find influencers who align with their values, while creators discover campaigns that fit their niche. Together, they build authentic partnerships that drive engagement, reach, and real results.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <Link to="/request-demo">
                 <Button

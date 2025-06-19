@@ -231,34 +231,34 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6 text-cherry-300">Services</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/request-demo" className="text-gray-300 hover:text-white transition-colors">
                   Campaign Management
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/request-demo" className="text-gray-300 hover:text-white transition-colors">
                   Influencer Discovery
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/request-demo" className="text-gray-300 hover:text-white transition-colors">
                   Brand-Influencer Matching
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/request-demo" className="text-gray-300 hover:text-white transition-colors">
                   Campaign Collaboration & Execution
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/request-demo" className="text-gray-300 hover:text-white transition-colors">
                   Trend Analysis & Strategy Optimization
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/request-demo" className="text-gray-300 hover:text-white transition-colors">
                   Contract & Payment Support
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -269,11 +269,11 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-cherry-400" />
-                <span className="text-gray-300">hello@denvey.com</span>
+                <span className="text-gray-300">shaklin@denvey.in, mansur.saq@denvey.in </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-cherry-400" />
-                <span className="text-gray-300">+91 8638043270</span>
+                <span className="text-gray-300">+91 8638043270, +91 95351 98415</span>
               </div>
               {/* <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-cherry-400" />
