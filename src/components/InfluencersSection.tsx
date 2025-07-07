@@ -33,7 +33,7 @@ const InfluencersSection = () => {
       name: "Aarav Mehta",
       handle: "@aarav_lifestyle",
       followers: "250K",
-      quote: "Denvey helped me find brands that match my audience and values. My reach and trust have grown tremendously!",
+      quote: "Mevia helped me find brands that match my audience and values. My reach and trust have grown tremendously!",
       avatar: "https://images.unsplash.com/photo-1509933551745-514268e48884?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGluZGlhbiUyMHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D"
     },
     {
@@ -47,7 +47,7 @@ const InfluencersSection = () => {
       name: "Neha Patil",
       handle: "@neha_fooddiary",
       followers: "320K",
-      quote: "Denvey values content creators and ensures we’re paid fairly. It’s a game changer for Indian influencers.",
+      quote: "Mevia values content creators and ensures we’re paid fairly. It’s a game changer for Indian influencers.",
       avatar: "https://plus.unsplash.com/premium_photo-1682098109069-0e49e3b42884?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGluZGlhbiUyMHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D"
     }
   ];

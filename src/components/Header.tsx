@@ -408,7 +408,7 @@ const Header = () => {
               />
             </div>
             <span className="text-xl sm:text-2xl font-bold text-gradient font-[Playfair_Display]">
-              DENVEY
+              MEVIA
             </span>
           </Link>
 

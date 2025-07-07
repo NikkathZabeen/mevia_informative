@@ -158,7 +158,7 @@ const HeroSection: React.FC = () => {
 
 
             <p className="text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed">
-              Denvey is an AI-powered influencer marketing platform connecting brands with the right creators. Brands find influencers who align with their values, while creators discover campaigns that fit their niche. Together, they build authentic partnerships that drive engagement, reach, and real results.
+              Mevia is an AI-powered influencer marketing platform connecting brands with the right creators. Brands find influencers who align with their values, while creators discover campaigns that fit their niche. Together, they build authentic partnerships that drive engagement, reach, and real results.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">

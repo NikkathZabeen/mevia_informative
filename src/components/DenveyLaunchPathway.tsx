@@ -22,7 +22,7 @@ const DenveyLaunchPathway = () => {
             title: "Intelligent Matching & Insights",
             description: (
                 <>
-                    <strong>Proprietary Matching Algorithm:</strong> Using advanced technology and data, Denvey intelligently pairs the right creators with the right brands — ensuring more impactful campaigns.
+                    <strong>Proprietary Matching Algorithm:</strong> Using advanced technology and data, Mevia intelligently pairs the right creators with the right brands — ensuring more impactful campaigns.
                     <br /><br />
                     <strong>Enhanced Analytics:</strong> Our platform provides deeper, actionable insights, helping brands and creators make smarter decisions and drive greater return on investment (ROI).
                 </>
@@ -39,10 +39,10 @@ const DenveyLaunchPathway = () => {
                 {/* Header */}
                 <div className="text-center mb-20">
                     <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-4">
-                        Denvey <span className="text-red-600">Strategic Launch Pathway</span>
+                        Mevia <span className="text-red-600">Strategic Launch Pathway</span>
                     </h2>
                     <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-                        Discover how Denvey is shaping the future of influencer marketing — empowering creators and brands to connect, collaborate, and grow smarter.
+                        Discover how Mevia is shaping the future of influencer marketing — empowering creators and brands to connect, collaborate, and grow smarter.
                     </p>
                 </div>
 

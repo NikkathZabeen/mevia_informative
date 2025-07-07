@@ -172,12 +172,12 @@ const Footer = () => {
               <div className="w-10 h-10 rounded-lg overflow-hidden bg-cherry-gradient shadow-lg">
                 <img
                   src="/lovable-uploads/542fdc0d-a9b0-4b9f-b44b-f396c5ce9ada.png"
-                  alt="Denvey Logo"
+                  alt="Mevia Logo"
                   className="w-full h-full object-cover"
                 />
               </div>
               <span className="text-2xl font-bold text-gradient font-[Playfair_Display]">
-                Denvey
+                Mevia
               </span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
@@ -269,7 +269,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-cherry-400" />
-                <span className="text-gray-300">shaklin@denvey.in, mansur.saq@denvey.in </span>
+                <span className="text-gray-300">shaklin@mevia.in, mansur.saq@mevia.in </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-cherry-400" />
@@ -289,7 +289,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">
-              © 2025 Denvey | SUMPIN TECHNOLOGY PRIVATE LIMITED. All rights reserved.
+              © 2025 Mevia | SUMPIN TECHNOLOGY PRIVATE LIMITED. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
 

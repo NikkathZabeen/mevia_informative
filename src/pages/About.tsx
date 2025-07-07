@@ -231,7 +231,7 @@ const About = () => {
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
                 India’s influencer marketing industry is a vast, untapped frontier — ready for powerful transformation and
-                growth. With Denvey’s cutting-edge technology, intelligent influencer matchmaking, and ROI-centric platform,
+                growth. With Mevia’s cutting-edge technology, intelligent influencer matchmaking, and ROI-centric platform,
                 we’re shaping a new era of influence — making it more efficient, more profitable, and more impactful for brands,
                 creators, and businesses.
               </p>
@@ -311,7 +311,7 @@ const About = () => {
                 Future Booming Opportunities
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Denvey isn’t just entering the influencer space — it’s redefining it. Join us and grow with the future of
+                Mevia isn’t just entering the influencer space — it’s redefining it. Join us and grow with the future of
                 influence-driven commerce in India.
               </p>
             </div>
@@ -354,7 +354,7 @@ const About = () => {
                     <div className="flex-1">
                       <h3 className="text-3xl font-bold text-gray-900 mb-4">2022 - The Beginning</h3>
                       <p className="text-lg text-gray-600 leading-relaxed">
-                        Denvey's journey began as an influencer marketing agency, helping brands connect with creators across India.
+                        Mevia's journey began as an influencer marketing agency, helping brands connect with creators across India.
                         Through close collaboration, we identified critical gaps in the ecosystem.
                       </p>
                       <div className="mt-4 inline-flex items-center px-4 py-2 bg-yellow-100 text-yellow-800 rounded-full font-medium">
@@ -405,7 +405,7 @@ const About = () => {
                     <div className="flex-1">
                       <h3 className="text-3xl font-bold text-gray-900 mb-4">Endless Possibilities</h3>
                       <p className="text-lg text-gray-600 leading-relaxed">
-                        Denvey is not just a platform; it's a solution built from the ground up to empower both creators
+                        Mevia is not just a platform; it's a solution built from the ground up to empower both creators
                         and businesses in a rapidly growing digital ecosystem.
                       </p>
                       <div className="mt-4 inline-flex items-center px-4 py-2 bg-purple-100 text-purple-800 rounded-full font-medium">

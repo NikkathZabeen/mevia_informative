@@ -13,7 +13,7 @@
 //     {
 //       icon: <Mail className="h-6 w-6 text-cherry-600" />,
 //       title: "Email Us",
-//       details: ["hello@denvey.com", "support@denvey.com"],
+//       details: ["hello@Mevia.com", "support@Mevia.com"],
 //       action: "Send an email"
 //     },
 //     {
@@ -60,7 +60,7 @@
 //               {[...Array(2)].map((_, index) => (
 //                 <div key={index} className="flex space-x-8 whitespace-nowrap text-xl font-semibold text-cherry-600 opacity-50">
 //                   {Array.from({ length: 20 }).map((_, i) => (
-//                     <span key={i}> Denvey </span>
+//                     <span key={i}> Mevia </span>
 //                   ))}
 //                 </div>
 //               ))}
@@ -584,7 +584,7 @@ const Contact = () => {
     {
       icon: <Mail className="h-6 w-6 text-cherry-600" />,
       title: "Email Us",
-      details: ["shaklin@denvey.in", "mansur.saq@denvey.in"],
+      details: ["shaklin@mevia.in", "mansur.saq@mevia.in"],
       action: "Send an email"
     },
     {
@@ -617,7 +617,7 @@ const Contact = () => {
       answer: "Yes, just select 'Platform Demo' from the interest dropdown and we'll get back to you with scheduling options."
     },
     {
-      question: "Who can use Denvey's platform?",
+      question: "Who can use Mevia's platform?",
       answer: "Our platform is designed for both brands looking to run influencer campaigns and creators seeking collaborations."
     },
     {
@@ -652,7 +652,7 @@ const Contact = () => {
               {[...Array(2)].map((_, index) => (
                 <div key={index} className="flex space-x-8 whitespace-nowrap text-xl font-semibold text-cherry-600 opacity-50">
                   {Array.from({ length: 20 }).map((_, i) => (
-                    <span key={i}> DENVEY </span>
+                    <span key={i}> MEVIA </span>
                   ))}
                 </div>
               ))}
@@ -728,7 +728,7 @@ const Contact = () => {
                           value={formData.firstName}
                           onChange={handleChange}
                           required
-                          placeholder="Amulya"
+                          placeholder="John"
                           className="border-gray-300 "
                         />
                       </div>
@@ -739,7 +739,7 @@ const Contact = () => {
                           value={formData.lastName}
                           onChange={handleChange}
                           required
-                          placeholder="Sri"
+                          placeholder="Doe"
                           className="border-gray-300"
                         />
                       </div>
@@ -753,7 +753,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        placeholder="sri@example.com"
+                        placeholder="john@example.com"
                         className="border-gray-300 "
                       />
                     </div>

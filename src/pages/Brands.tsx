@@ -137,7 +137,7 @@ const Brands = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
                 <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
-                  Why Brands Choose Denvey
+                  Why Brands Choose Mevia
                 </h2>
                 <div className="space-y-4">
                   {benefits.map((benefit, index) => (
@@ -166,7 +166,7 @@ const Brands = () => {
               Ready to Transform Your Marketing?
             </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Join hundreds of successful brands who trust Denvey to connect them with the perfect influencers for their campaigns.
+              Join hundreds of successful brands who trust Mevia to connect them with the perfect influencers for their campaigns.
             </p>
             <Link to="/request-demo">
               <Button

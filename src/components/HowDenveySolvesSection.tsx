@@ -6,7 +6,7 @@ const HowDenveySolvesSection = () => {
         {
             icon: Zap,
             title: "AI-Powered Influencer Matching",
-            description: "Denvey uses intelligent algorithms to connect brands with the right influencers based on niche, audience behavior, engagement quality, and campaign objectives — reducing mismatched collaborations and fake followers.",
+            description: "Mevia uses intelligent algorithms to connect brands with the right influencers based on niche, audience behavior, engagement quality, and campaign objectives — reducing mismatched collaborations and fake followers.",
             number: "01"
         },
         {
@@ -30,7 +30,7 @@ const HowDenveySolvesSection = () => {
         {
             icon: LayoutDashboard,
             title: "End-to-End Influencer Campaign Management",
-            description: "Denvey streamlines the entire influencer marketing workflow — from influencer discovery to campaign execution and reporting — all in one easy-to-use platform.",
+            description: "Mevia streamlines the entire influencer marketing workflow — from influencer discovery to campaign execution and reporting — all in one easy-to-use platform.",
             number: "05"
         }
     ];
@@ -41,7 +41,7 @@ const HowDenveySolvesSection = () => {
                 {/* Header */}
                 <div className="text-center mb-20 animate-fade-in">
                     <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                        How <span className="text-cherry-600">Denvey</span> Solves
+                        How <span className="text-cherry-600">Mevia</span> Solves
                     </h2>
                     <p className="text-2xl lg:text-3xl font-medium text-gray-600 mb-8">
                         Influencer Marketing Challenges for Brands and Creators.

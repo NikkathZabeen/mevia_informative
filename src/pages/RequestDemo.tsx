@@ -157,7 +157,7 @@ const RequestDemo = () => {
                 Request a <span className="text-gradient">Demo</span>
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                See Denvey in action with a personalized demo. Our experts will show you how to
+                See Mevia in action with a personalized demo. Our experts will show you how to
                 launch successful influencer campaigns and achieve your marketing goals.
               </p>
             </div>

@@ -20,7 +20,7 @@ const BrandsSection = () => {
     {
       icon: <Users className="h-8 w-8 text-cherry-600" />,
       title: "End-to-End Campaign Management",
-      description: "Plan, execute, and manage influencer campaigns seamlessly. From discovery to contract, content approval to payment — Denvey handles it all in one streamlined platform.",
+      description: "Plan, execute, and manage influencer campaigns seamlessly. From discovery to contract, content approval to payment — Mevia handles it all in one streamlined platform.",
     },
     {
       icon: <Zap className="h-8 w-8 text-cherry-600" />,
@@ -43,7 +43,7 @@ const BrandsSection = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Connect with authentic influencers who align with your brand values and speak your audience’s language.
-            Denvey helps you drive real engagement, build trust, and
+            Mevia helps you drive real engagement, build trust, and
             achieve measurable ROI through data-driven creator collaborations.
           </p>
         </div>

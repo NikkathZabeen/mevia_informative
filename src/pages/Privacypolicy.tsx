@@ -51,7 +51,7 @@ const PrivacyPolicy = () => {
                             Privacy <span className="text-gradient">Policy</span>
                         </h1>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                            At Denvey, your privacy and trust are paramount. We are committed to protecting your personal information and using it responsibly to provide you with a seamless and secure experience.
+                            At Mevia, your privacy and trust are paramount. We are committed to protecting your personal information and using it responsibly to provide you with a seamless and secure experience.
                         </p>
                     </div>
                 </section>

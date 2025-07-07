@@ -1296,7 +1296,7 @@ const TellUsYourChallenge = () => {
                         <p className="text-lg text-gray-600 leading-relaxed">
                             Challenge Wall is designed for brands and influencers to share the challenges they face in the influencer marketing industry.
                             Whether it’s struggling with brand-creator alignment, campaign performance, ROI tracking, or platform usability — this is your space to speak up.
-                            Your insights help us improve Denvey, shaping better tools and smarter solutions for more impactful influencer campaigns.
+                            Your insights help us improve Mevia, shaping better tools and smarter solutions for more impactful influencer campaigns.
                             Let’s solve the real problems of influencer marketing — together.
                         </p>
                     </div>
