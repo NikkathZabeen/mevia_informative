@@ -369,7 +369,7 @@ const About = () => {
                       2
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-3xl font-bold text-gray-900 mb-4">2+ Years of R&D</h3>
+                      <h3 className="text-3xl font-bold text-gray-900 mb-4">Research-Led Approach</h3>
                       <p className="text-lg text-gray-600 leading-relaxed">
                         We invested extensively in research and development, gaining deep understanding of industry pain points
                         through data-driven insights and market analysis.

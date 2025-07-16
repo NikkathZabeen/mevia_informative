@@ -584,7 +584,7 @@ const Contact = () => {
     {
       icon: <Mail className="h-6 w-6 text-cherry-600" />,
       title: "Email Us",
-      details: ["shaklin@mevia.in", "mansur.saq@mevia.in"],
+      details: ["shaklin@meviastudio.com ", "msr.saq@meviastudio.com "],
       action: "Send an email"
     },
     {

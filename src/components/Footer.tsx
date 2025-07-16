@@ -168,18 +168,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 rounded-lg overflow-hidden bg-cherry-gradient shadow-lg">
-                <img
-                  src="/lovable-uploads/542fdc0d-a9b0-4b9f-b44b-f396c5ce9ada.png"
-                  alt="Mevia Logo"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <span className="text-2xl font-bold text-gradient font-[Playfair_Display]">
-                Mevia
-              </span>
+            <div className="mb-6">
+              <img
+                src="/lovable-uploads/logo.png"
+                alt="Logo"
+                className="w-36 sm:w-48 object-contain"
+              />
             </div>
+
             <p className="text-gray-300 mb-6 leading-relaxed">
               Connecting brands with influential voices to create authentic marketing campaigns that drive real results.
             </p>
@@ -269,7 +265,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-cherry-400" />
-                <span className="text-gray-300">shaklin@mevia.in, mansur.saq@mevia.in </span>
+                <span className="text-gray-300">shaklin@meviastudio.com , msr.saq@meviastudio.com </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-cherry-400" />

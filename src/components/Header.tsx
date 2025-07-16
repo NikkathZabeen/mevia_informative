@@ -399,18 +399,14 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden bg-cherry-gradient shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-              <img
-                src="/lovable-uploads/542fdc0d-a9b0-4b9f-b44b-f396c5ce9ada.png"
-                alt="Denvey Logo"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <span className="text-xl sm:text-2xl font-bold text-gradient font-[Playfair_Display]">
-              MEVIA
-            </span>
+          <Link to="/" className="group">
+            <img
+              src="/lovable-uploads/logo.png"
+              alt="Logo"
+              className="w-36 sm:w-49 object-contain transition-transform duration-300 group-hover:scale-105"
+            />
           </Link>
+
 
           <nav className="hidden lg:flex items-center space-x-6">
             {navigationItems.slice(0, 3).map((item) => (
