@@ -288,16 +288,13 @@ const Footer = () => {
               © 2025 Mevia | SUMPIN TECHNOLOGY PRIVATE LIMITED. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
-
-              <div className="space-y-2">
-                <Link to="/privacy-policy" className="text-gray-400 hover:text-white transition">
-                  Privacy Policy
-                </Link>
-              </div>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                Terms of Service
+              <a href="/documents/Mevia Privacy Policy (1).pdf" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                Privacy Policy
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="/documents/Mevia Terms of Service (1).pdf" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                Terms & Conditions
+              </a>
+              <a href="/documents/cookie-policy.pdf" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 Cookie Policy
               </a>
             </div>
