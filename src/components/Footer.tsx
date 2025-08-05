@@ -180,19 +180,40 @@ const Footer = () => {
               Connecting brands with influential voices to create authentic marketing campaigns that drive real results.
             </p>
             <div className="flex space-x-4">
-              <a href="https://www.facebook.com/profile.php?id=61578768274224" className="text-gray-400 hover:text-cherry-400 transition-colors">
+              <a
+                href="https://www.facebook.com/profile.php?id=61578768274224"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-cherry-400 transition-colors"
+              >
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-cherry-400 transition-colors">
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-cherry-400 transition-colors"
+              >
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="https://www.linkedin.com/company/mevia-in/?viewAsMember=true" className="text-gray-400 hover:text-cherry-400 transition-colors">
+              <a
+                href="https://www.linkedin.com/company/mevia-in/?viewAsMember=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-cherry-400 transition-colors"
+              >
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="https://www.instagram.com/mevia.app/" className="text-gray-400 hover:text-cherry-400 transition-colors">
+              <a
+                href="https://www.instagram.com/mevia.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-cherry-400 transition-colors"
+              >
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
+
           </div>
 
           {/* Quick Links */}
