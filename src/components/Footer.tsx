@@ -181,7 +181,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://www.instagram.com/mevia.app/"
+                href="https://www.instagram.com/mevia.in/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-cherry-400 transition-colors"
