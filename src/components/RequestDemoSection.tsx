@@ -1,47 +1,47 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, Calendar, Users, BarChart3 } from 'lucide-react';
 
-const RequestDemoSection = () => {
-  const demoFeatures = [
+const StrategyCallSection = () => {
+  const features = [
     {
       icon: <Users className="h-6 w-6 text-cherry-600" />,
-      title: "Live Platform Demo",
-      description: "See our influencer discovery and campaign management tools in action."
+      title: "Brand Audit",
+      description: "We analyze your brand identity, goals, and audience to design the right influencer marketing approach."
     },
     {
       icon: <BarChart3 className="h-6 w-6 text-cherry-600" />,
-      title: "Analytics Overview",
-      description: "Explore real-time performance tracking and ROI measurement."
+      title: "Campaign Blueprint",
+      description: "Get a clear, step-by-step plan outlining influencer selection, campaign flow, and success metrics."
     },
     {
       icon: <Calendar className="h-6 w-6 text-cherry-600" />,
-      title: "Custom Strategy",
-      description: "Get personalized recommendations for your brand's goals."
+      title: "Timeline & Budget Guidance",
+      description: "We’ll help you allocate resources efficiently for maximum impact and ROI."
     }
   ];
 
   return (
     <section className="py-16 lg:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Ready to See <span className="text-gradient">Mevia</span> in Action?
+            Ready to Grow with <span className="text-gradient">Mevia Agency</span>?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Book a personalized demo and discover how our platform can transform
-            your influencer marketing campaigns and drive measurable results.
+            Book a free strategy call with our team and discover how our influencer campaigns
+            can elevate your brand, engage your audience, and drive real results.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Demo Features */}
+          {/* Features */}
           <div className="space-y-8">
             <div className="space-y-6">
-              {demoFeatures.map((feature, index) => (
+              {features.map((feature, index) => (
                 <div key={index} className="flex items-start space-x-4 animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
                   <div className="bg-cherry-100 rounded-full p-3 flex-shrink-0">
                     {feature.icon}
@@ -60,26 +60,26 @@ const RequestDemoSection = () => {
 
             <div className="bg-cherry-light-gradient rounded-2xl p-8">
               <h4 className="text-xl font-semibold text-gray-900 mb-4">
-                What You'll Learn
+                What You’ll Gain
               </h4>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-center space-x-3">
                   <ArrowRight className="h-4 w-4 text-cherry-600" />
-                  <span>How to find perfect influencer matches</span>
+                  <span>Clarity on your influencer marketing goals</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <ArrowRight className="h-4 w-4 text-cherry-600" />
-                  <span>Campaign setup and management best practices</span>
+                  <span>Customized campaign strategy for your niche</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <ArrowRight className="h-4 w-4 text-cherry-600" />
-                  <span>Measuring ROI and campaign success</span>
+                  <span>Insights on expected reach, engagement & ROI</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          {/* Demo Request Card */}
+          {/* Booking Card */}
           <Card className="shadow-2xl border-0 bg-white">
             <CardContent className="p-8">
               <div className="text-center mb-8">
@@ -87,10 +87,10 @@ const RequestDemoSection = () => {
                   <Calendar className="h-8 w-8 text-cherry-600" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  Schedule Your Demo
+                  Book Your Free Strategy Call
                 </h3>
                 <p className="text-gray-600">
-                  30-minute personalized session with our experts
+                  30-minute consultation with our campaign experts
                 </p>
               </div>
 
@@ -106,19 +106,19 @@ const RequestDemoSection = () => {
                   </div>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="text-2xl font-bold text-cherry-600 mb-1">1:1</div>
-                    <div className="text-sm text-gray-600">Personal</div>
+                    <div className="text-sm text-gray-600">Expert Session</div>
                   </div>
                 </div>
 
-                <Link to="/request-demo" className="block">
+                <Link to="/contact" className="block">
                   <Button className="w-full bg-cherry-gradient hover:shadow-xl transition-all duration-300 text-white font-semibold py-4 text-lg group">
-                    Book Your Free Demo
+                    Schedule a Call
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
 
                 <p className="text-center text-sm text-gray-500">
-                  No commitment required • Available 24/7 • Expert guidance
+                  No commitment required • Tailored insights • Limited slots weekly
                 </p>
               </div>
             </CardContent>
@@ -129,7 +129,4 @@ const RequestDemoSection = () => {
   );
 };
 
-export default RequestDemoSection;
-
-
-
+export default StrategyCallSection;

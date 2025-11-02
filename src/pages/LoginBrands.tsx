@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
@@ -6,9 +5,9 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
-import { Eye, EyeOff, Building, ArrowRight } from 'lucide-react';
+import { Eye, EyeOff, Building2, ArrowRight } from 'lucide-react';
 
-const LoginBrands = () => {
+const LoginAgency = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -22,24 +21,24 @@ const LoginBrands = () => {
                 <CardContent className="p-8">
                   <div className="text-center mb-8">
                     <div className="bg-cherry-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <Building className="h-8 w-8 text-cherry-600" />
+                      <Building2 className="h-8 w-8 text-cherry-600" />
                     </div>
                     <h1 className="text-2xl font-bold text-gray-900 mb-2">
-                      Brand Login
+                      Agency Login
                     </h1>
                     <p className="text-gray-600">
-                      Access your brand dashboard and manage campaigns
+                      Manage client campaigns, creators, and performance analytics — all in one place.
                     </p>
                   </div>
 
                   <form className="space-y-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Email Address
+                        Agency Email
                       </label>
-                      <Input 
-                        type="email" 
-                        placeholder="brand@company.com"
+                      <Input
+                        type="email"
+                        placeholder="agency@yourdomain.com"
                         className="border-gray-300 focus:border-cherry-500"
                       />
                     </div>
@@ -49,7 +48,7 @@ const LoginBrands = () => {
                         Password
                       </label>
                       <div className="relative">
-                        <Input 
+                        <Input
                           type={showPassword ? "text" : "password"}
                           placeholder="Enter your password"
                           className="border-gray-300 focus:border-cherry-500 pr-10"
@@ -85,14 +84,14 @@ const LoginBrands = () => {
 
                   <div className="mt-8 text-center">
                     <p className="text-gray-600 mb-4">
-                      Don't have a brand account?
+                      Not registered as an agency yet?
                     </p>
                     <Link to="/request-demo">
-                      <Button 
-                        variant="outline" 
+                      <Button
+                        variant="outline"
                         className="w-full text-cherry-600 border-cherry-200 hover:bg-cherry-50 group"
                       >
-                        Request Demo
+                        Request a Consultation
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                       </Button>
                     </Link>
@@ -100,7 +99,7 @@ const LoginBrands = () => {
 
                   <div className="mt-6 pt-6 border-t border-gray-200">
                     <p className="text-center text-sm text-gray-500">
-                      Are you an influencer?{' '}
+                      Are you a creator or brand partner?{' '}
                       <Link to="/login/influencers" className="text-cherry-600 hover:text-cherry-700 font-medium">
                         Login here
                       </Link>
@@ -117,4 +116,4 @@ const LoginBrands = () => {
   );
 };
 
-export default LoginBrands;
+export default LoginAgency;

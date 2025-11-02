@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Search, Handshake, BarChart, CheckCircle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -7,26 +6,26 @@ const HowItWorksSection = () => {
   const steps = [
     {
       icon: <Search className="h-12 w-12 text-cherry-600" />,
-      title: "Discover & Connect",
-      description: "Browse our curated network of influencers or let brands find you through our AI-powered matching system.",
+      title: "Research & Strategy",
+      description: "We start by understanding your brand, audience, and goals to craft a data-driven influencer marketing strategy that fits your identity.",
       color: "bg-blue-50"
     },
     {
       icon: <Handshake className="h-12 w-12 text-cherry-600" />,
-      title: "Collaborate & Create",
-      description: "Work together on authentic content that resonates with your audience and achieves campaign objectives.",
+      title: "Creator Collaboration",
+      description: "Our team identifies, reaches out to, and manages influencers who align perfectly with your brand message and campaign objectives.",
       color: "bg-purple-50"
     },
     {
       icon: <BarChart className="h-12 w-12 text-cherry-600" />,
-      title: "Track & Optimize",
-      description: "Monitor performance in real-time with detailed analytics and insights to maximize campaign success.",
+      title: "Campaign Execution",
+      description: "We handle end-to-end execution — from creative direction and content approval to scheduling, publishing, and coordination.",
       color: "bg-green-50"
     },
     {
       icon: <CheckCircle className="h-12 w-12 text-cherry-600" />,
-      title: "Deliver Results",
-      description: "Achieve measurable outcomes with our comprehensive reporting and ROI tracking tools.",
+      title: "Performance & Reporting",
+      description: "Once the campaign goes live, we track KPIs, analyze engagement metrics, and deliver transparent performance reports with actionable insights.",
       color: "bg-orange-50"
     }
   ];
@@ -37,11 +36,11 @@ const HowItWorksSection = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
-            How to Get <span className="text-gradient">Started</span>
+            How <span className="text-gradient">Denvey Works</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            From discovery to delivery, our streamlined process makes influencer marketing simple,
-            effective, and transparent for both brands and creators.
+            Our process blends creativity and strategy — helping brands partner with the right creators,
+            deliver meaningful stories, and achieve measurable impact.
           </p>
         </div>
 
@@ -79,49 +78,6 @@ const HowItWorksSection = () => {
             </div>
           ))}
         </div>
-
-        {/* Process Visualization */}
-        {/* <div className="bg-cherry-light-gradient rounded-3xl p-8 lg:p-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                Seamless Workflow
-              </h3>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Our platform automates the complex parts of influencer marketing while keeping the human connection at its core.
-                From contract negotiations to payment processing, we handle the logistics so you can focus on creating amazing content.
-              </p>
-
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-6 w-6 text-cherry-600" />
-                  <span className="text-gray-700 font-medium">Automated matching algorithm</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-6 w-6 text-cherry-600" />
-                  <span className="text-gray-700 font-medium">Secure contract management</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-6 w-6 text-cherry-600" />
-                  <span className="text-gray-700 font-medium">Real-time performance tracking</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-6 w-6 text-cherry-600" />
-                  <span className="text-gray-700 font-medium">Guaranteed payment protection</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative">
-              <img
-                src="https://plus.unsplash.com/premium_photo-1725408044110-eff678909e0a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHNvY2lhbCUyMG1lZGlhJTIwbWFhcmtldGluZ3xlbnwwfHwwfHx8MA%3D%3D"
-                alt="Workflow Dashboard"
-                className="rounded-2xl shadow-2xl"
-              />
-              <div className="absolute inset-0 bg-cherry-gradient rounded-2xl opacity-10"></div>
-            </div>
-          </div>
-        </div> */}
       </div>
     </section>
   );

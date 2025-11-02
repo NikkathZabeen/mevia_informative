@@ -1,8 +1,7 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { ArrowRight, BarChart3, Users, Target, Zap, CheckCircle } from 'lucide-react';
+import { ArrowRight, Briefcase, Lightbulb, Users, Zap, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
@@ -10,36 +9,40 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const Brands = () => {
-  const features = [
+  const services = [
     {
-      icon: <Target className="h-12 w-12 text-cherry-600" />,
-      title: "Precision Targeting",
-      description: "Find influencers who perfectly match your brand values and target audience using our advanced AI algorithms."
-    },
-    {
-      icon: <BarChart3 className="h-12 w-12 text-cherry-600" />,
-      title: "Advanced Analytics",
-      description: "Track every metric that matters with real-time reporting and comprehensive campaign insights."
+      icon: <Lightbulb className="h-12 w-12 text-cherry-600" />,
+      title: "Creative Campaign Strategy",
+      description:
+        "We design data-driven influencer campaigns tailored to your brand goals — from concept ideation to flawless execution.",
     },
     {
       icon: <Users className="h-12 w-12 text-cherry-600" />,
-      title: "Vetted Network",
-      description: "Access our curated network of authentic influencers who have been verified for quality and engagement."
+      title: "Influencer Sourcing & Management",
+      description:
+        "Our team handpicks and manages influencers who align perfectly with your audience, ensuring authenticity and high engagement.",
+    },
+    {
+      icon: <Briefcase className="h-12 w-12 text-cherry-600" />,
+      title: "Content Production & Brand Storytelling",
+      description:
+        "We handle end-to-end creative production — videos, reels, and posts that amplify your brand’s voice across all platforms.",
     },
     {
       icon: <Zap className="h-12 w-12 text-cherry-600" />,
-      title: "Campaign Automation",
-      description: "Streamline your workflow with automated contract management, content approval, and payment processing."
-    }
+      title: "Performance Tracking & ROI Reporting",
+      description:
+        "Get transparent reports on reach, conversions, and ROI with actionable insights that help you scale every campaign.",
+    },
   ];
 
-  const benefits = [
-    "Increase brand awareness by 350% on average",
-    "Drive 5x higher engagement than traditional advertising",
-    "Access to vetted influencers across all niches",
-    "Real-time campaign tracking and optimization",
-    "Secure payment and contract management",
-    "Dedicated account manager support"
+  const reasons = [
+    "Personalized influencer strategy tailored to your brand",
+    "Access to 10,000+ verified influencers across niches",
+    "End-to-end campaign execution handled by our experts",
+    "Creative team for scripting, production & storytelling",
+    "Transparent ROI tracking and performance reports",
+    "Trusted by top startups and D2C brands across India",
   ];
 
   return (
@@ -52,14 +55,11 @@ const Brands = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
                 <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-                  Scale Your Brand with
-                  <span className="text-gradient block">
-                    Authentic Influence
-                  </span>
+                  Scale Your Brand with <span className="text-gradient block">Authentic Influence</span>
                 </h1>
                 <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                  Connect with verified influencers who genuinely love your brand.
-                  Drive meaningful engagement and measurable results with our enterprise-grade platform.
+                  At Mevia, we craft impactful influencer campaigns that connect brands with audiences through creativity,
+                  strategy, and authenticity. From ideation to execution — we do it all for you.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link to="/request-demo">
@@ -67,7 +67,7 @@ const Brands = () => {
                       size="lg"
                       className="bg-cherry-gradient hover:shadow-xl transform hover:scale-105 transition-all duration-300 text-white font-semibold text-lg px-8 py-4 group"
                     >
-                      Start Your Campaign
+                      Work With Us
                       <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
@@ -79,7 +79,7 @@ const Brands = () => {
                   showStatus={false}
                   autoPlay
                   infiniteLoop
-                  interval={1000}
+                  interval={1500}
                   className="rounded-2xl shadow-2xl"
                 >
                   {[
@@ -99,30 +99,30 @@ const Brands = () => {
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* Services Section */}
         <section className="py-16 lg:py-24 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Everything You Need to Succeed
+                Our Core Services
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our comprehensive platform provides all the tools and insights you need to run successful influencer marketing campaigns.
+                From influencer selection to campaign analytics — we manage every detail to help your brand make an impact.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+              {services.map((service, index) => (
                 <Card key={index} className="shadow-lg hover:shadow-xl transition-all duration-300 border-0">
                   <CardContent className="p-8 text-center">
                     <div className="bg-cherry-50 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                      {feature.icon}
+                      {service.icon}
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                      {feature.title}
+                      {service.title}
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      {feature.description}
+                      {service.description}
                     </p>
                   </CardContent>
                 </Card>
@@ -131,19 +131,19 @@ const Brands = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* Why Choose Us */}
         <section className="py-16 lg:py-24 bg-cherry-light-gradient">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
                 <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
-                  Why Brands Choose Mevia
+                  Why Brands Partner with Mevia Agency
                 </h2>
                 <div className="space-y-4">
-                  {benefits.map((benefit, index) => (
+                  {reasons.map((reason, index) => (
                     <div key={index} className="flex items-center space-x-3">
                       <CheckCircle className="h-6 w-6 text-cherry-600 flex-shrink-0" />
-                      <span className="text-lg text-gray-700">{benefit}</span>
+                      <span className="text-lg text-gray-700">{reason}</span>
                     </div>
                   ))}
                 </div>
@@ -151,7 +151,7 @@ const Brands = () => {
               <div>
                 <img
                   src="https://media.istockphoto.com/id/1150734727/photo/businesswoman-hand-placing-or-pulling-wooden-dominoes-with-brand-text-and-marketing.webp?a=1&b=1&s=612x612&w=0&k=20&c=QrrGZkeQHKyajwKTg56X6v-ZbLB2qOiNqS2DeU_mVsI="
-                  alt="Analytics Dashboard"
+                  alt="Agency Campaign Strategy"
                   className="rounded-2xl shadow-2xl"
                 />
               </div>
@@ -163,17 +163,17 @@ const Brands = () => {
         <section className="py-16 lg:py-24 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-              Ready to Transform Your Marketing?
+              Let’s Build Influence That Converts
             </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Join hundreds of successful brands who trust Mevia to connect them with the perfect influencers for their campaigns.
+              Partner with Mevia Agency to create influencer campaigns that resonate, inspire, and deliver measurable business growth.
             </p>
             <Link to="/request-demo">
               <Button
                 size="lg"
                 className="bg-cherry-gradient hover:shadow-xl transform hover:scale-105 transition-all duration-300 text-white font-semibold text-lg px-8 py-4"
               >
-                Get Started Today
+                Get in Touch
               </Button>
             </Link>
           </div>
